@@ -1,9 +1,10 @@
-import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Fileupload from './components/Fileupload';
 function App() {
   return (
-    <div className='App'>
-      <h1>File Upload</h1>
+    <div style={{ paddingLeft: 300 }}>
+      <h1>File & Image Upload NodeJS</h1>
+      <Fileupload />
     </div>
   );
 }

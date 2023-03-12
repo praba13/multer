@@ -8,9 +8,11 @@ const bodyParser = require('body-parser');
 dotenv.config();
 const app = express();
 
+app.use(cors());
 app.use(express.static('./public'));
+app.use(bodyParser.json());
 
-let storage = multer({
+let storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, './public/images');
   },
